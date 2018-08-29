@@ -1,4 +1,4 @@
-# ts-common.github.io
+# TS-COMMON
 
 ## TypeScript Repository Initialization
 
