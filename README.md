@@ -2,8 +2,8 @@
 
 ## Recommendations
 
-- **No Sequantial Coupling**. See https://en.wikipedia.org/wiki/Sequential_coupling
-- **No Object Inheritance**. Use
+- **No sequential coupling**. See https://en.wikipedia.org/wiki/Sequential_coupling
+- **No object inheritance**. Use
   - composition,
   - unions, or
   - discriminated unions
