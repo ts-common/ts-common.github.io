@@ -1,5 +1,10 @@
 # TS-COMMON
 
+## Requirements
+
+- TypeScript version: >=3.0.1
+- ECMAScript target version: ES2017
+
 ## Recommendations
 
 - **No sequential coupling**. See https://en.wikipedia.org/wiki/Sequential_coupling
