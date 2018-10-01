@@ -48,7 +48,10 @@
          ]
     },
     "files": [
-        "index.d.ts"
+        "index.d.ts",
+        "index.d.ts.map",
+        "index.js.map",
+        "index.ts"
     ],
     ```
 1. `npm run tsc -- --init`
@@ -56,6 +59,7 @@
     ```json
     "target": "es2015",
     "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
     "importHelpers": true
 
