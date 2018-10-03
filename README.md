@@ -45,8 +45,9 @@
         "reporter": [
             "lcov",
             "text"
-         ]
+        ]
     },
+    "types": "index.d.ts",
     "files": [
         "index.d.ts",
         "index.d.ts.map",
