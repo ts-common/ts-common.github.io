@@ -34,6 +34,8 @@
 
 1. `npm init`
 1. `npm install -D typescript`
+1. `npm install -D nyc`
+1. `npm install -D mocha`
 1. `package.json`:
     ```json
     "scripts": {
@@ -76,5 +78,3 @@
     *.d.ts
     *.map
     ```
-1. `npm install -D nyc`
-1. `npm install -D mocha`
