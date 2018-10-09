@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- TypeScript version: >=3.0.1
+- TypeScript version: >=3.1.1
 - ECMAScript target version: ES2017
 
 ## Recommendations
@@ -34,9 +34,7 @@
 ## TypeScript Repository Initialization
 
 1. `npm init`
-1. `npm install -D typescript`
-1. `npm install -D nyc`
-1. `npm install -D mocha`
+1. `npm install -D typescript nyc mocha`
 1. `package.json`:
     ```json
     "scripts": {
