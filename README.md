@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- TypeScript version: >=3.1.1
+- TypeScript version: >=3.1.3
 - ECMAScript target version: ES2017
 
 ## Recommendations
@@ -39,21 +39,26 @@
     ```json
     "scripts": {
         "tsc": "tsc",
-        "test": "tsc && nyc mocha",
+        "test": "tsc && nyc mocha ./dist/test/*.js",
         "prepack": "npm install && tsc"
     },
     "nyc": {
         "reporter": [
             "lcov",
             "text"
+        ],
+        "include": [
+            "dist/*.js"
         ]
     },
-    "types": "index.d.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "files": [
-        "index.d.ts",
-        "index.d.ts.map",
-        "index.js.map",
-        "index.ts"
+        "dist/index.d.ts",
+        "dist/index.d.ts.map",
+        "dist/index.js.map",
+        "dist/index.js",
+        "src/index.ts"
     ],
     ```
 1. `npm run tsc -- --init`
@@ -61,8 +66,9 @@
     ```json
     "target": "es2015",
     "declaration": true,
-    "declarationMap": true,
     "sourceMap": true,
+    "declarationMap": true,
+    "outDir": "./dist",
     "importHelpers": true
 
     "noUnusedLocals": true,
@@ -70,7 +76,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     ```
-1. Create `index.ts`
+1. Create `src/index.ts`
 1. `.gitignore`:
     ```
     *.js
