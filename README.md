@@ -34,18 +34,19 @@
 ## TypeScript Repository Initialization
 
 1. `npm init`
-1. `npm install -D typescript nyc mocha chai @types/mocha`
+1. `npm install -D typescript nyc mocha chai @types/mocha mocha-junit-reporter`
 1. `package.json`:
     ```json
     "scripts": {
         "tsc": "tsc",
-        "test": "tsc && nyc mocha ./dist/test/*.js",
+        "test": "tsc && nyc mocha ./dist/test/*.js --reporter mocha-junit-reporter",
         "prepack": "npm install && tsc"
     },
     "nyc": {
         "reporter": [
-            "lcov",
-            "text"
+            "html",
+            "text",
+            "cobertura"
         ],
         "include": [
             "dist/*.js"
@@ -82,4 +83,25 @@
     *.js
     *.d.ts
     *.map
+    test-results.xml
+    ```
+ 1. `azure-pipelines.xml`:
+    ```yaml
+    pool:
+      vmImage: 'Ubuntu 16.04'
+
+    steps:
+    - script: npm install
+    - script: npm test
+
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFiles: '**/test-results.xml'
+        testRunTitle: 'Test results for JavaScript'
+
+    - task: PublishCodeCoverageResults@1
+      inputs:
+        codeCoverageTool: Cobertura
+        summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
+        reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
     ```
