@@ -90,14 +90,24 @@
     *.map
     test-results.xml
     ```
- 1. `azure-pipelines.xml`:
+ 1. `azure-pipelines.yml`:
     ```yaml
     pool:
       vmImage: 'Ubuntu 16.04'
 
+    trigger:
+    - master
+
     steps:
+
     - script: npm install
-    - script: npm test
+
+    - task: Npm@1
+      displayName: 'npm test'
+      inputs:
+        command: custom
+        verbose: false
+        customCommand: test
 
     - task: PublishTestResults@2
       inputs:
@@ -109,4 +119,21 @@
         codeCoverageTool: Cobertura
         summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
         reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
+
+    - task: Npm@1
+      displayName: 'npm pack'
+      inputs:
+        command: custom
+        verbose: false
+        customCommand: pack
+
+    - task: CopyFiles@2
+      displayName: 'Copy Files to: drop'
+      inputs:
+        Contents: '*.tgz'
+        TargetFolder: drop
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathtoPublish: $(Build.SourcesDirectory)/drop
     ```
