@@ -50,7 +50,12 @@
         ],
         "include": [
             "dist/*.js"
-        ]
+        ],
+        "check-coverage": true,
+        "lines": 100,
+        "statements": 100,
+        "functions": 100,
+        "branches": 100
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
