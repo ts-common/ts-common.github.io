@@ -100,7 +100,12 @@
 
     steps:
 
-    - script: npm install
+    steps:
+
+    - task: Npm@1
+      displayName: 'npm install'
+      inputs:
+        verbose: false
 
     - task: Npm@1
       displayName: 'npm test'
