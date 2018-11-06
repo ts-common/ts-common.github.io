@@ -30,6 +30,7 @@
   - use callback function (dependency injection).
 - **No `clone`, `cloneDeep`.** Use immutable data to avoid cloning.
 - **No `Symbol("...")`.** Use `Symbol.for("...")` instead.
+- **No `{ function(); }` declaration in the interface.** Use `{ readonly property: () => void }` instead.
 
 ## TypeScript Repository Initialization
 
