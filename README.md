@@ -16,7 +16,7 @@
 - **No `any` type**, use `unknonw` instead
 - **Use read only types**.
   - `ReadonlyArray<T>` instead of `T[]`,
-  - `Tuple2<A, B>` instead of `[A, B]`,
+  - `Tuple2<A, B>` instead of `[A, B]` (see `ts-common/tuple`),
   - `readonly` properties.
 - **No `var`**. Use `const` instead. In some cases, use `let`.
 - **No `exporte class`.** Use `export interface` and `export function` instead.
