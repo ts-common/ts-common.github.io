@@ -69,20 +69,7 @@
     ],
     ```
 1. `npm run tsc -- --init`
-1. `tsconfig.json`:
-    ```json
-    "target": "es2015",
-    "declaration": true,
-    "sourceMap": true,
-    "declarationMap": true,
-    "outDir": "./dist",
-    "importHelpers": true
-
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    ```
+1. [tsconfig.json](examples/tsconfig.json)
 1. Create `src/index.ts`
 1. `.gitignore`:
     ```
@@ -92,3 +79,7 @@
     test-results.xml
     ```
  1. [examples/azure-pipelines.yml](examples/azure-pipelines.yml)
+
+ ## Optional
+
+ 1. Save the Visual Studio Code workspace.
