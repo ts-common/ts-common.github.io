@@ -19,7 +19,7 @@
   - `Tuple2<A, B>` instead of `[A, B]` (see `ts-common/tuple`),
   - `readonly` properties.
 - **No `var`**. Use `const` instead. In some cases, use `let`.
-- **No `exporte class`.** Use `export interface` and `export function` instead.
+- **No `export class`.** Use `export interface` and `export function` instead.
 - **No `null`.** Use `undefined` instead.
 - **String index property type should be a superset of `undefined`**.
   - Incorrect `{ [key: string]: T }`
