@@ -69,7 +69,7 @@
     ],
     ```
 1. `npm run tsc -- --init`
-1. [examples/tsconfig.json](examples/tsconfig.json)
+1. [tsconfig.json](examples/tsconfig.json)
 1. Create `src/index.ts`
 1. `.gitignore`:
     ```
@@ -78,7 +78,8 @@
     *.map
     test-results.xml
     ```
- 1. [examples/azure-pipelines.yml](examples/azure-pipelines.yml)
+ 1. [mocha-multi-reporters.json](examples/mocha-multi-reporters.json)
+ 1. [azure-pipelines.yml](examples/azure-pipelines.yml)
 
  ## Optional
 
