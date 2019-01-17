@@ -69,7 +69,7 @@
     ],
     ```
 1. `npm run tsc -- --init`
-1. [tsconfig.json](examples/tsconfig.json)
+1. [examples/tsconfig.json](examples/tsconfig.json)
 1. Create `src/index.ts`
 1. `.gitignore`:
     ```
