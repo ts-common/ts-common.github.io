@@ -40,7 +40,7 @@
     ```json
     "scripts": {
         "tsc": "tsc",
-        "test": "tsc && nyc mocha ./dist/test/*.js --reporter mocha-junit-reporter",
+        "test": "tsc && nyc mocha ./dist/test/*.js --reporter mocha-multi-reporters --reporter-options configFile=mocha-multi-reporters.json",
         "prepack": "npm install && tsc"
     },
     "nyc": {
