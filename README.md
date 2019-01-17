@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- TypeScript version: >=3.1.3
+- TypeScript version: >=3.2.2
 - ECMAScript target version: ES2017
 
 ## Recommendations
