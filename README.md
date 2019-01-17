@@ -35,7 +35,7 @@
 ## TypeScript Repository Initialization
 
 1. `npm init`
-1. `npm install -D typescript nyc mocha chai @types/mocha mocha-junit-reporter`
+1. `npm install -D typescript nyc mocha chai @types/mocha mocha-junit-reporter mocha-multi-reporters`
 1. `package.json`:
     ```json
     "scripts": {
