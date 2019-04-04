@@ -7,6 +7,7 @@
 
 ## Recommendations
 
+- https://standardjs.com/rules.html
 - **Conventions over configuration**
 - **No sequential coupling**. See https://en.wikipedia.org/wiki/Sequential_coupling
 - **No object inheritance**. Use
