@@ -2,8 +2,17 @@
 
 ## Requirements
 
-- TypeScript version: >=3.2.2
-- ECMAScript target version: ES2017
+- TypeScript version: >=3.4.3
+- ECMAScript target version: ES2019
+
+## Why do we need another set of JS libraries?
+
+Because we would like to have
+1. TypeScript native libraries instead of using '@types'
+1. functional style libraries
+   1. functions without side-effects
+   1. immutable data
+1. Target the the latest ES standard and use the latest TS & ES features such as asynchronous iterators.
 
 ## Recommendations
 
