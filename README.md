@@ -41,6 +41,8 @@ Because we would like to have
 - **No `clone`, `cloneDeep`.** Use immutable data to avoid cloning.
 - **No `Symbol("...")`.** Use `Symbol.for("...")` instead.
 - **No `{ function(); }` declaration in the interface.** Use `{ readonly property: () => void }` instead.
+- **No `as` operator**. Use type narrowing.
+- **No `is` operator**. Use discriminators.
 
 ## TypeScript Repository Initialization
 
