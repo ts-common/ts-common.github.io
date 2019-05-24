@@ -47,12 +47,12 @@ Because we would like to have
 ## TypeScript Repository Initialization
 
 1. `npm init`
-1. `npm install -D typescript nyc mocha chai @types/mocha mocha-junit-reporter mocha-multi-reporters`
+1. `npm install -D typescript @types/jest jest jest-junit`
 1. `package.json`:
     ```json
     "scripts": {
         "tsc": "tsc",
-        "test": "tsc && nyc mocha ./dist/test/*.js --reporter mocha-multi-reporters --reporter-options configFile=mocha-multi-reporters.json",
+        "test": "tsc && jest",
         "prepack": "npm install && tsc"
     },
     "jest": {
