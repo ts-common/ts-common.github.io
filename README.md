@@ -55,20 +55,36 @@ Because we would like to have
         "test": "tsc && nyc mocha ./dist/test/*.js --reporter mocha-multi-reporters --reporter-options configFile=mocha-multi-reporters.json",
         "prepack": "npm install && tsc"
     },
-    "nyc": {
-        "reporter": [
-            "html",
-            "text",
-            "cobertura"
-        ],
-        "include": [
-            "dist/*.js"
-        ],
-        "check-coverage": true,
-        "lines": 100,
-        "statements": 100,
-        "functions": 100,
-        "branches": 100
+    "jest": {
+      "testEnvironment": "node",
+      "testMatch": [
+        "**/dist/test/*test.js"
+      ],
+      "reporters": [
+        "jest-junit",
+        "default"
+      ],
+      "collectCoverage": true,
+      "coverageThreshold": {
+        "global": {
+          "branches": 100,
+          "functions": 100,
+          "lines": 100,
+          "statements": 100
+        }
+      },
+      "coveragePathIgnorePatterns": [
+        "/dist/test/"
+      ],
+      "coverageReporters": [
+        "cobertura",
+        "text",
+        "html"
+      ]
+    },
+    "jest-junit": {
+      "outputDirectory": ".",
+      "outputName": "test-results.xml"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
