@@ -47,7 +47,7 @@ Because we would like to have
 ## TypeScript Repository Initialization
 
 1. `npm init`
-1. `npm install -D typescript @types/jest jest jest-junit`
+1. `npm install -D typescript @types/jest jest jest-junit tslint tslint-immutable`
 1. `package.json`:
     ```json
     "scripts": {
