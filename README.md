@@ -52,7 +52,7 @@ Because we would like to have
     ```json
     "scripts": {
         "tsc": "tsc",
-        "test": "tsc && jest",
+        "test": "tsc && tslint -p tsconfig.json && jest",
         "prepack": "npm install && tsc"
     },
     "jest": {
