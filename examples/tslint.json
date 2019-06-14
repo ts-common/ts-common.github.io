@@ -1,0 +1,23 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:all",
+        "tslint-immutable/all"
+    ],
+    "jsRules": {},
+    "rules": {
+        "no-use-before-declare": false,
+        "typedef": false,
+        "semicolon": [true, "never"],
+        "interface-over-type-literal": false,
+        "type-literal-delimiter": false,
+        "member-ordering": false,
+        "trailing-comma": false,
+        "newline-before-return": false,
+        "prefer-method-signature": false,
+        "arrow-parens": [true, "ban-single-arg-parens"],
+        "object-literal-sort-keys": false,
+        "no-null-keyword": false
+    },
+    "rulesDirectory": []
+}
