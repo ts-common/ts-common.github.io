@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- TypeScript version: >=3.4.3
+- TypeScript version: >=3.5.1
 - ECMAScript target version: ES2019
 
 ## Why do we need another set of JS libraries?
@@ -106,7 +106,6 @@ Because we would like to have
     *.map
     test-results.xml
     ```
- 1. [mocha-multi-reporters.json](examples/mocha-multi-reporters.json)
  1. [azure-pipelines.yml](examples/azure-pipelines.yml)
  1. [tslint.json](examples/tslint.json)
 
