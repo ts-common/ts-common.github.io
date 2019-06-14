@@ -108,6 +108,7 @@ Because we would like to have
     ```
  1. [mocha-multi-reporters.json](examples/mocha-multi-reporters.json)
  1. [azure-pipelines.yml](examples/azure-pipelines.yml)
+ 1. [tslint.json](examples/tslint.json)
 
  ## Optional
 
