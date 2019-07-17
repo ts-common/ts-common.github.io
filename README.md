@@ -65,6 +65,7 @@ Because we would like to have
         "default"
       ],
       "collectCoverage": true,
+      "collectCoverageFrom": [ "dist/*.js"],
       "coverageThreshold": {
         "global": {
           "branches": 100,
